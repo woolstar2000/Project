@@ -47,15 +47,16 @@ while(simulation==1) {
 	// checker for 7 occuring in the number set
 	
 	
-	if (lotton1 + lotton2 + lotton3 == 6) {
-	ctin++;
-	}
-	//checks for numbers 1,2,3 in set
-	
-	}
-	cout<<"Percentage of time the result contains three even numbers:"<<((evenct/entryno)*100)<<endl;
-	cout<<"Percentage of time the number 7 occurs in the three numbers:"<<((sevench/entryno)*100)<<endl;
-	cout<<"Percentage of time the numbers 1,2,3 occur (not necessarily in order):"<<((ctin/entryno)*100)<<endl;
+        if ((lotton1 + lotton2 + lotton3) == 6) {
+        ctin++;
+        }
+        //checks for numbers 1,2,3 in set
+
+        }
+        cout<<"Percentage of time the result contains three even numbers:"<<(100 * evenct/entryno)<<endl;
+        cout<<"Percentage of time the number 7 occurs in the three numbers:"<<(100 * sevench/entryno)<<endl;
+        cout<<"Percentage of time the numbers 1,2,3 occur (not necessarily in order):"<<(100* ctin/entryno)<<endl;
+
 	//prompts user to repeat program
 	cout<<endl<<"Another pick? Press 1 for yes =>2"<<endl;
 	cin>>simulation;
