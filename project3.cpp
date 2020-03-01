@@ -47,7 +47,7 @@ while(simulation==1) {
 	// checker for 7 occuring in the number set
 	
 	
-	if (lotton1 + lotton2 + lotton3 = 6) {
+	if (lotton1 + lotton2 + lotton3 == 6) {
 	ctin++;
 	}
 	//checks for numbers 1,2,3 in set
