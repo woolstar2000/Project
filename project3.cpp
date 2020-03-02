@@ -5,9 +5,15 @@ Instructor: Vijayanth (VJ) Tummala and Kleanthis Zisis Tegos
 */
 #include <iostream>
 #include <stdlib.h> //for rand function
+#include <time.h>
 #include <ctype.h>
 
 using namespace std;
+
+int iseven( int val )
+{
+    return ( val % 2 ) == 0 ;
+}
 
 void sim_run(int entryno)
 {
@@ -23,9 +29,9 @@ void sim_run(int entryno)
         lotton3 = rand() % 10 + 1;
         cout<<"Lottery number is:"<<lotton1<<"-"<<lotton2<<"-"<<lotton3<<endl;
         
-        if ((lotton1 % 2 == 0) && (lotton2 % 2 == 0) && (lotton3 % 2 == 0)) {
-                evenct++;
-        } 
+        if ( iseven( lotton1) && iseven( lotton2) && iseven( lotton3 ) )
+          { evenct ++ ; }
+
         /*
         checker for even numbers
         adds 1 to the counter each time 3 even numbers occur in the loop
@@ -52,15 +58,19 @@ void sim_run(int entryno)
 
 
 int main  (int N, char ** S) {
+ 
+
 int entryno, simulation ;
 
-//setup loop framework
-if (( N > 1 ) && isdigit( S[1][1] ) )
+
+if (( N > 1 ) && isdigit( S[1][0] ) )
 {
-        sim_run( atoi( S[ 1] ) ) ;
-        exit( 0) ;
+      srand( time(0)) ;
+      sim_run( atoi( S[ 1] ) ) ;
+      exit( 0) ;
 }
 
+  //setup loop framework
 simulation = 1;
 while(simulation==1) {
         
